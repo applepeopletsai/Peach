@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="Peach" customModuleProvider="target">
+            <connections>
+                <outlet property="captureButton" destination="Rix-sq-odQ" id="C1D-he-2sC"/>
+                <outlet property="capturePhotoBgView" destination="YXN-89-jfx" id="Mll-sM-edp"/>
+                <outlet property="permissionView" destination="pS6-TI-ils" id="HXl-aE-Uxv"/>
+                <outlet property="previewView" destination="ne0-47-gZj" id="5ZF-Q2-ugd"/>
+                <outlet property="view" destination="m39-HZ-Dlw" id="qZw-eY-yH0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="m39-HZ-Dlw">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ne0-47-gZj" customClass="PreviewView" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Csm-Gq-fDe" appends="YES" id="B0R-EH-Z80"/>
+                    </connections>
+                </view>
+                <view hidden="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-89-jfx" customClass="CircleView" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="172" y="752" width="70" height="70"/>
+                    <color key="backgroundColor" red="1" green="0.43137254901960786" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rix-sq-odQ" customClass="IBInspectableButton" customModule="Peach" customModuleProvider="target">
+                    <rect key="frame" x="182" y="762" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FtA-VY-ZoC"/>
+                        <constraint firstAttribute="width" constant="50" id="NOg-sQ-fXa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="captureButtonPress:" destination="-1" eventType="touchUpInside" id="CWj-Zi-kSk"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pS6-TI-ils">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRo-Yn-mjD" customClass="IBInspectableButton" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="137" y="389" width="140" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.43137254901960786" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Gb3-Qk-E5n"/>
+                                <constraint firstAttribute="width" constant="140" id="zj8-ED-Igg"/>
+                            </constraints>
+                            <state key="normal" title="啟用相機存取權限">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_1"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="permissionButtonPress:" destination="-1" eventType="touchUpInside" id="ckV-jQ-6LR"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此設定可讓Peach使用你的相機拍攝照片或錄影。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLp-FG-kdF" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="10" y="338.5" width="394" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_11"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請允許存取你的相機" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-46-Mb0" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="115.5" y="282.5" width="183.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_12"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vLp-FG-kdF" firstAttribute="leading" secondItem="pS6-TI-ils" secondAttribute="leading" constant="10" id="0TX-hc-yqO"/>
+                        <constraint firstItem="P4U-46-Mb0" firstAttribute="centerX" secondItem="pS6-TI-ils" secondAttribute="centerX" id="AaV-vD-ADN"/>
+                        <constraint firstAttribute="trailing" secondItem="vLp-FG-kdF" secondAttribute="trailing" constant="10" id="LfH-Fu-AEj"/>
+                        <constraint firstItem="dRo-Yn-mjD" firstAttribute="centerX" secondItem="pS6-TI-ils" secondAttribute="centerX" id="ZKn-PO-qMT"/>
+                        <constraint firstItem="vLp-FG-kdF" firstAttribute="centerX" secondItem="pS6-TI-ils" secondAttribute="centerX" id="bwX-1L-uje"/>
+                        <constraint firstItem="vLp-FG-kdF" firstAttribute="top" secondItem="P4U-46-Mb0" secondAttribute="bottom" constant="32" id="haG-uH-b9n"/>
+                        <constraint firstItem="dRo-Yn-mjD" firstAttribute="top" secondItem="vLp-FG-kdF" secondAttribute="bottom" constant="30" id="kdc-Gh-Tsu"/>
+                        <constraint firstItem="dRo-Yn-mjD" firstAttribute="centerY" secondItem="pS6-TI-ils" secondAttribute="centerY" id="sjM-T9-ZDD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="pS6-TI-ils" firstAttribute="top" secondItem="XcB-TC-OQg" secondAttribute="top" id="05a-ef-li1"/>
+                <constraint firstItem="pS6-TI-ils" firstAttribute="trailing" secondItem="XcB-TC-OQg" secondAttribute="trailing" id="5sQ-Co-OBe"/>
+                <constraint firstItem="XcB-TC-OQg" firstAttribute="trailing" secondItem="ne0-47-gZj" secondAttribute="trailing" id="9n8-oe-BRT"/>
+                <constraint firstItem="XcB-TC-OQg" firstAttribute="bottom" secondItem="Rix-sq-odQ" secondAttribute="bottom" constant="50" id="AUl-8i-unK"/>
+                <constraint firstAttribute="bottom" secondItem="ne0-47-gZj" secondAttribute="bottom" id="FFF-Ub-QxK"/>
+                <constraint firstItem="YXN-89-jfx" firstAttribute="leading" secondItem="Rix-sq-odQ" secondAttribute="leading" constant="-10" id="HCu-y8-zSt"/>
+                <constraint firstItem="YXN-89-jfx" firstAttribute="bottom" secondItem="Rix-sq-odQ" secondAttribute="bottom" constant="10" id="JIq-Ml-Wf0"/>
+                <constraint firstItem="YXN-89-jfx" firstAttribute="trailing" secondItem="Rix-sq-odQ" secondAttribute="trailing" constant="10" id="OPb-w5-ecS"/>
+                <constraint firstItem="XcB-TC-OQg" firstAttribute="bottom" secondItem="pS6-TI-ils" secondAttribute="bottom" id="TNK-qi-YNV"/>
+                <constraint firstItem="pS6-TI-ils" firstAttribute="leading" secondItem="XcB-TC-OQg" secondAttribute="leading" id="Zo1-jY-8eh"/>
+                <constraint firstItem="Rix-sq-odQ" firstAttribute="centerX" secondItem="XcB-TC-OQg" secondAttribute="centerX" id="kJi-IJ-Yvp"/>
+                <constraint firstItem="YXN-89-jfx" firstAttribute="top" secondItem="Rix-sq-odQ" secondAttribute="top" constant="-10" id="mds-xD-g3h"/>
+                <constraint firstItem="ne0-47-gZj" firstAttribute="top" secondItem="XcB-TC-OQg" secondAttribute="top" id="neW-vk-qdr"/>
+                <constraint firstItem="ne0-47-gZj" firstAttribute="leading" secondItem="XcB-TC-OQg" secondAttribute="leading" id="tBd-DN-aPJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="XcB-TC-OQg"/>
+            <point key="canvasLocation" x="0.0" y="145.98214285714286"/>
+        </view>
+        <tapGestureRecognizer id="Csm-Gq-fDe">
+            <connections>
+                <action selector="focusAndExposeTap:" destination="-1" id="jqK-I4-Ni8"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

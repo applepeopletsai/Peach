@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Kingfisher (5.7.0)
+  - lottie-ios (3.1.2)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - QuickLayout (3.0.0)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
+  - Result (4.1.0)
+  - SwiftEntryKit (1.1.1):
+    - QuickLayout (= 3.0.0)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - lottie-ios
+  - Moya (~> 13.0)
+  - RealmSwift
+  - SwiftEntryKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - lottie-ios
+    - Moya
+    - QuickLayout
+    - Realm
+    - RealmSwift
+    - Result
+    - SwiftEntryKit
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftEntryKit: df2d08f3ba46b3972ce163537a64e87c2518f611
+
+PODFILE CHECKSUM: aa7070a7d92f6df19daa3794ab02e4d86064e977
+
+COCOAPODS: 1.7.5

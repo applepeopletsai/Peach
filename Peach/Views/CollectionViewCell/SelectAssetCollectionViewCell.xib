@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectAssetCollectionViewCell" id="EwV-A3-Aaw" customClass="SelectAssetCollectionViewCell" customModule="Peach" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2OH-0B-PxR">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-h9-Z1s" customClass="IBInspectableImageView" customModule="Peach" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="0.43137254901960786" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5d-Yt-YNh" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                        <rect key="frame" x="75" y="5" width="20" height="20"/>
+                        <color key="backgroundColor" red="1" green="0.43137254901960786" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="C75-t5-KYA"/>
+                            <constraint firstAttribute="height" constant="20" id="qaf-6y-Dn4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96N-Ne-wWg" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                        <rect key="frame" x="62" y="79" width="33" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-Y3-b91">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rZj-h9-Z1s" firstAttribute="leading" secondItem="2OH-0B-PxR" secondAttribute="leading" id="1ah-PK-STG"/>
+                    <constraint firstItem="rZj-h9-Z1s" firstAttribute="top" secondItem="2OH-0B-PxR" secondAttribute="top" id="A2F-Ed-VfF"/>
+                    <constraint firstAttribute="trailing" secondItem="L5d-Yt-YNh" secondAttribute="trailing" constant="5" id="Guu-ZK-eeV"/>
+                    <constraint firstAttribute="trailing" secondItem="rZj-h9-Z1s" secondAttribute="trailing" id="Uf7-qH-wnb"/>
+                    <constraint firstItem="Z8N-Y3-b91" firstAttribute="leading" secondItem="2OH-0B-PxR" secondAttribute="leading" id="bnx-aT-aMb"/>
+                    <constraint firstAttribute="bottom" secondItem="Z8N-Y3-b91" secondAttribute="bottom" id="e8P-CC-kwr"/>
+                    <constraint firstItem="Z8N-Y3-b91" firstAttribute="top" secondItem="2OH-0B-PxR" secondAttribute="top" id="gvt-3m-h19"/>
+                    <constraint firstItem="L5d-Yt-YNh" firstAttribute="top" secondItem="2OH-0B-PxR" secondAttribute="top" constant="5" id="kui-bz-yFT"/>
+                    <constraint firstAttribute="trailing" secondItem="Z8N-Y3-b91" secondAttribute="trailing" id="opu-JW-tYP"/>
+                    <constraint firstAttribute="bottom" secondItem="96N-Ne-wWg" secondAttribute="bottom" constant="5" id="txO-kr-hmW"/>
+                    <constraint firstAttribute="bottom" secondItem="rZj-h9-Z1s" secondAttribute="bottom" id="wSn-IW-Ssk"/>
+                    <constraint firstAttribute="trailing" secondItem="96N-Ne-wWg" secondAttribute="trailing" constant="5" id="xes-Pq-9mX"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="101" height="104"/>
+            <connections>
+                <outlet property="countLabel" destination="L5d-Yt-YNh" id="Cil-G6-Ny1"/>
+                <outlet property="coverView" destination="Z8N-Y3-b91" id="Ff9-KE-2xG"/>
+                <outlet property="imageView" destination="rZj-h9-Z1s" id="SxT-KO-W6W"/>
+                <outlet property="timeLabel" destination="96N-Ne-wWg" id="ZAI-Xd-Uk2"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="170.75892857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectPhotosViewController" customModule="Peach" customModuleProvider="target">
+            <connections>
+                <outlet property="addAssetButton" destination="IT9-v0-5hk" id="iyc-JO-3hL"/>
+                <outlet property="bottomView" destination="ex5-rQ-FtV" id="1Mr-zH-DoX"/>
+                <outlet property="collectionView" destination="b4C-6V-jxi" id="tRa-cr-sg7"/>
+                <outlet property="permissionView" destination="eQW-Lq-QIs" id="Sdz-Nz-9al"/>
+                <outlet property="view" destination="8t4-as-9lr" id="988-d1-x5a"/>
+                <outletCollection property="assetTypeButtons" destination="DBh-SA-X44" collectionClass="NSMutableArray" id="0k5-dm-KpQ"/>
+                <outletCollection property="assetTypeButtons" destination="d8c-m6-lpP" collectionClass="NSMutableArray" id="0V4-02-0hQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="8t4-as-9lr">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="b4C-6V-jxi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u04-nx-9ao">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex5-rQ-FtV">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-WZ-eit">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="WDx-Rr-y2O"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-SA-X44">
+                            <rect key="frame" x="0.0" y="1" width="207" height="49"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.98431372549999996" green="0.33725490200000002" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="assetTypeButtonPress:" destination="-1" eventType="touchUpInside" id="rJZ-NG-NjR"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8c-m6-lpP">
+                            <rect key="frame" x="207" y="1" width="207" height="49"/>
+                            <state key="normal" image="btn_video">
+                                <color key="titleColor" red="0.98431372549999996" green="0.33725490200000002" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="assetTypeButtonPress:" destination="-1" eventType="touchUpInside" id="2l0-3I-yIA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ItB-WZ-eit" firstAttribute="leading" secondItem="ex5-rQ-FtV" secondAttribute="leading" id="9LL-Uw-4yx"/>
+                        <constraint firstItem="d8c-m6-lpP" firstAttribute="leading" secondItem="DBh-SA-X44" secondAttribute="trailing" id="9aG-s6-9WC"/>
+                        <constraint firstItem="d8c-m6-lpP" firstAttribute="top" secondItem="ItB-WZ-eit" secondAttribute="bottom" id="BPD-C8-WuE"/>
+                        <constraint firstAttribute="bottom" secondItem="d8c-m6-lpP" secondAttribute="bottom" id="Bhv-QB-qzB"/>
+                        <constraint firstItem="DBh-SA-X44" firstAttribute="top" secondItem="ItB-WZ-eit" secondAttribute="bottom" id="CPs-tt-hdR"/>
+                        <constraint firstAttribute="height" constant="50" id="MuV-eH-BUA"/>
+                        <constraint firstAttribute="trailing" secondItem="d8c-m6-lpP" secondAttribute="trailing" id="NBL-9b-ihZ"/>
+                        <constraint firstAttribute="bottom" secondItem="DBh-SA-X44" secondAttribute="bottom" id="OTx-mr-ehm"/>
+                        <constraint firstItem="DBh-SA-X44" firstAttribute="leading" secondItem="ex5-rQ-FtV" secondAttribute="leading" id="UU3-Hb-2Gv"/>
+                        <constraint firstAttribute="trailing" secondItem="ItB-WZ-eit" secondAttribute="trailing" id="VyP-dV-aqZ"/>
+                        <constraint firstItem="ItB-WZ-eit" firstAttribute="top" secondItem="ex5-rQ-FtV" secondAttribute="top" id="bxW-9a-xfC"/>
+                        <constraint firstItem="DBh-SA-X44" firstAttribute="width" secondItem="d8c-m6-lpP" secondAttribute="width" id="s7d-cz-a5A"/>
+                    </constraints>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT9-v0-5hk">
+                    <rect key="frame" x="359" y="757" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Zsv-Qx-n6b"/>
+                        <constraint firstAttribute="width" secondItem="IT9-v0-5hk" secondAttribute="height" multiplier="1:1" id="by5-8z-DnV"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="btn_photo_shoot"/>
+                    <connections>
+                        <action selector="addAssetButtonPress:" destination="-1" eventType="touchUpInside" id="IOJ-WP-Iwg"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-Lq-QIs">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmO-0L-Har" customClass="IBInspectableButton" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="137" y="389" width="140" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.43137254901960786" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="NNz-fN-NM8"/>
+                                <constraint firstAttribute="height" constant="40" id="YNv-41-tiR"/>
+                            </constraints>
+                            <state key="normal" title="啟用圖庫存取權限">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_1"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="permissionButtonPress:" destination="-1" eventType="touchUpInside" id="byo-G3-KcG"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="此設定可讓Peach分享你圖庫內的相片，以及將相片儲存到你的相機膠卷。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btc-zS-vaF" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="10" y="318" width="394" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_3"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請允許存取你的照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpG-aK-ZoT" customClass="IBInspectableLabel" customModule="Peach" customModuleProvider="target">
+                            <rect key="frame" x="115.5" y="262" width="183.5" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="photo_2"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="KmO-0L-Har" firstAttribute="centerY" secondItem="eQW-Lq-QIs" secondAttribute="centerY" id="69w-WW-tO0"/>
+                        <constraint firstItem="btc-zS-vaF" firstAttribute="leading" secondItem="eQW-Lq-QIs" secondAttribute="leading" constant="10" id="7Ru-3t-Dh3"/>
+                        <constraint firstItem="VpG-aK-ZoT" firstAttribute="centerX" secondItem="eQW-Lq-QIs" secondAttribute="centerX" id="9rb-4u-oMo"/>
+                        <constraint firstItem="btc-zS-vaF" firstAttribute="top" secondItem="VpG-aK-ZoT" secondAttribute="bottom" constant="32" id="Cw5-3m-5Ur"/>
+                        <constraint firstItem="KmO-0L-Har" firstAttribute="centerX" secondItem="eQW-Lq-QIs" secondAttribute="centerX" id="G8g-p0-sjm"/>
+                        <constraint firstItem="btc-zS-vaF" firstAttribute="centerX" secondItem="eQW-Lq-QIs" secondAttribute="centerX" id="GHA-PC-eWe"/>
+                        <constraint firstAttribute="trailing" secondItem="btc-zS-vaF" secondAttribute="trailing" constant="10" id="Pki-PJ-Iuf"/>
+                        <constraint firstItem="KmO-0L-Har" firstAttribute="top" secondItem="btc-zS-vaF" secondAttribute="bottom" constant="30" id="T3J-JE-WOm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eQW-Lq-QIs" firstAttribute="top" secondItem="QJj-6o-JCD" secondAttribute="top" id="7p6-NA-Wwa"/>
+                <constraint firstItem="QJj-6o-JCD" firstAttribute="bottom" secondItem="ex5-rQ-FtV" secondAttribute="bottom" id="Fp7-I1-AI7"/>
+                <constraint firstItem="QJj-6o-JCD" firstAttribute="trailing" secondItem="eQW-Lq-QIs" secondAttribute="trailing" id="Gyo-S3-H9T"/>
+                <constraint firstItem="b4C-6V-jxi" firstAttribute="top" secondItem="QJj-6o-JCD" secondAttribute="top" id="PCP-Xw-zKy"/>
+                <constraint firstItem="ex5-rQ-FtV" firstAttribute="leading" secondItem="QJj-6o-JCD" secondAttribute="leading" id="TV3-IR-Mg9"/>
+                <constraint firstItem="QJj-6o-JCD" firstAttribute="trailing" secondItem="IT9-v0-5hk" secondAttribute="trailing" constant="20" id="Vya-cm-Ayl"/>
+                <constraint firstItem="ex5-rQ-FtV" firstAttribute="top" secondItem="IT9-v0-5hk" secondAttribute="bottom" constant="20" id="cgE-UR-hgZ"/>
+                <constraint firstItem="QJj-6o-JCD" firstAttribute="trailing" secondItem="ex5-rQ-FtV" secondAttribute="trailing" id="fHu-M5-2jL"/>
+                <constraint firstItem="ex5-rQ-FtV" firstAttribute="top" secondItem="b4C-6V-jxi" secondAttribute="bottom" id="gxb-4C-M33"/>
+                <constraint firstItem="b4C-6V-jxi" firstAttribute="leading" secondItem="QJj-6o-JCD" secondAttribute="leading" id="nso-Il-Okp"/>
+                <constraint firstItem="eQW-Lq-QIs" firstAttribute="bottom" secondItem="QJj-6o-JCD" secondAttribute="bottom" id="spk-rV-hzB"/>
+                <constraint firstItem="QJj-6o-JCD" firstAttribute="trailing" secondItem="b4C-6V-jxi" secondAttribute="trailing" id="tNe-En-akz"/>
+                <constraint firstItem="eQW-Lq-QIs" firstAttribute="leading" secondItem="QJj-6o-JCD" secondAttribute="leading" id="y7N-bj-kT7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QJj-6o-JCD"/>
+            <point key="canvasLocation" x="-220.28985507246378" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_photo_shoot" width="32" height="32"/>
+        <image name="btn_video" width="32" height="32"/>
+    </resources>
+</document>

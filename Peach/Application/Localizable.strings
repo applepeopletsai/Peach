@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Peach
+
+  Created by dean on 2019/8/19.
+  Copyright © 2019 WeOnlyLiveOnce. All rights reserved.
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+ "" = "";
+*/
+
+//User Permissions
+"permission_CamaraTitle" = "Access to camera not available";
+"permission_CamaraContent" = "Please enable access to camera in order to use this feature";
+"permission_CamaraGoToSetting" = "Settings";
+
+"permission_PhotoTitle" = "Access to Photo not available";
+"permission_PhotoContent" = "Please enable access with Photo in order to use this feature";
+"permission_PhotoGoToSetting" = "Settings";
+
+"permission_NotificationTitle" = "Access to Notification not available";
+"permission_NotificationContent" = "Please enable access with Notification in order to use this feature";
+"permission_NotificationGoToSetting" = "Settings";
+
+"permission_LocationTitle" = "Access to Location not available";
+"permission_LocationContent" = "Please enable access with Location in order to use this feature";
+"permission_LocationGoToSetting" = "Settings";
+
+//MainIndexVC
+"MainIndexVC_nearBy" = "Near By U";
+"MainIndexVC_Latest" = "Latest";
+"MainIndexVC_watchAll" = "Watch All";
+"MainIndexVC_becomeVIP" = "Become VIP";
+"MainIndexVC_upgrade" = "Upgrade";
+"MainIndexVC_goddess" = "Wanted Goddess";
+"MainIndexVC_goddess_content" = "Best Girls For VIP Only";
+"MainIndexVC_watchAll" = "Watch All";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+
+//NaviBar
+naviBar_1 = "返回";
+naviBar_2 = "取消";
+
+//TabBar
+tabBarItem_1 = "首頁";
+tabBarItem_2 = "搜尋";
+tabBarItem_3 = "上傳";
+tabBarItem_4 = "聊天";
+tabBarItem_5 = "我的";
+
+//Preference
+preferenceSetting_1 = "下一步";
+preferenceSetting_2 = "開始約會吧";
+preferenceSetting_3 = "設定完成";
+preferenceSetting_4 = "選擇你的生理性別";
+preferenceSetting_5 = "選擇你喜歡的交友類型";
+preferenceSetting_6 = "選擇你喜歡的女神風格";
+preferenceSetting_7 = "選擇你最在意的部位";
+preferenceSetting_8 = "我的喜好";
+
+//Photo
+photo_1 = "啟用圖庫存取權限";
+photo_2 = "請允許存取你的照片";
+photo_3 = "此設定可讓Peach分享你圖庫內的相片，以及將相片儲存到你的相機膠卷。";
+photo_4 = "照片";
+photo_5 = "影片";
+photo_6 = "選擇圖庫";
+photo_7 = "拍攝照片";
+photo_8 = "重新拍攝";
+photo_9 = "選擇封面";
+photo_10 = "啟用相機存取權限";
+photo_11 = "此設定可讓Peach使用你的相機拍攝照片或錄影。";
+photo_12 = "請允許存取你的相機";
+photo_13 = "拍攝影片";
+
+//CropperViewController
+crop_Title = "調整照片";
+crop_NextStep = "下一步";
+
+//UploadPhotoVC
+upLoad_Title = "準備上傳";
+upLoad_upLoad = "上傳";
